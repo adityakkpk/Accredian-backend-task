@@ -11,8 +11,7 @@ const PORT: number = Number(process.env.PORT) || 3000;
 // Middleware
 app.use(
   cors({
-    origin: "http://localhost:5173", // Vite's default port
-    methods: ["GET", "POST"],
+    origin: process.env.CORS_ORIGIN || 'http://localhost:5173',
     credentials: true,
   })
 );
