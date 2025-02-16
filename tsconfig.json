@@ -25,9 +25,9 @@
     "baseUrl": ".",
     "strict": true,
     "forceConsistentCasingInFileNames": true,
-    "types": ["node", "express", "cors", "body-parser"],
-    "typeRoots": ["./node_modules/@types", "./src/@types"]
+    "typeRoots": ["./node_modules/@types"],
+    "types": ["node"]
   },
   "exclude": ["node_modules", "dist"],
-  "include": ["./**/*"]
+  "include": ["./**/*", "*.ts"]
 }
