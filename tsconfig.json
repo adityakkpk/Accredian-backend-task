@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es6",
+    "target": "es2018",
     "module": "commonjs",
     "lib": ["es2018", "esnext.asynciterable"],
     "skipLibCheck": true,
@@ -28,6 +28,6 @@
     "types": ["node", "express", "cors", "body-parser"],
     "typeRoots": ["./node_modules/@types", "./src/@types"]
   },
-  "exclude": ["node_modules"],
-  "include": ["./**/*", "utils", "app.ts", "types", "services", "routes", "models", "middleware", "controllers", "config"]
+  "exclude": ["node_modules", "dist"],
+  "include": ["./**/*"]
 }

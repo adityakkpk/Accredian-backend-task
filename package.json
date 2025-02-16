@@ -5,13 +5,12 @@
   "main": "dist/app.js",
   "scripts": {
     "start": "node dist/app.js",
-    "build": "npm install && tsc",
+    "build": "npm install && npx prisma generate && tsc",
     "dev": "ts-node-dev --respawn --transpile-only app.ts",
     "lint": "eslint . --ext .ts",
     "prisma:generate": "prisma generate",
     "prisma:push": "prisma db push",
-    "prisma:studio": "prisma studio",
-    "postinstall": "npm run prisma:generate && tsc"
+    "prisma:studio": "prisma studio"
   },
   "dependencies": {
     "@prisma/client": "^5.x.x",
