@@ -29,7 +29,7 @@ export class ReferralController {
     }
   }
 
-  async getReferrals(req: Request, res: Response) {
+  async getReferrals(_: Request, res: Response) {
     try {
       const referrals = await prisma.referral.findMany();
       res.json(referrals);
