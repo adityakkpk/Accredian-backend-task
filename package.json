@@ -5,7 +5,7 @@
   "main": "dist/app.js",
   "scripts": {
     "start": "node --experimental-specifier-resolution=node dist/app.js dist/app.js",
-    "build": "npm install && npm run prisma:generate && tsc",
+    "build": "npm install && npm install @prisma/client --save && npm run prisma:generate && tsc",
     "dev": "ts-node-dev --respawn --transpile-only app.ts",
     "lint": "eslint . --ext .ts",
     "prisma:generate": "prisma generate",
