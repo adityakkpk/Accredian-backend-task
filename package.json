@@ -4,7 +4,7 @@
   "description": "A Node.js application for handling referral form data with RESTful APIs, MySQL database connectivity using Prisma ORM, error handling, and email notifications.",
   "main": "dist/app.js",
   "scripts": {
-    "start": "node --experimental-specifier-resolution=node dist/app.js dist/app.js",
+    "start": "node dist/app.js",
     "build": "npm install && npm install @prisma/client --save && npm run prisma:generate && tsc",
     "dev": "ts-node-dev --respawn --transpile-only app.ts",
     "lint": "eslint . --ext .ts",
