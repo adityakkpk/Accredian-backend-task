@@ -1,5 +1,5 @@
 import express from "express";
-import bodyParser from "body-parser";
+import { json, urlencoded } from "body-parser";
 import cors from "cors";
 import { setReferralRoutes } from "./routes/referralRoutes";
 import { errorHandler } from "./middleware/errorHandler";
@@ -15,8 +15,8 @@ app.use(
     credentials: true,
   })
 );
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(json());
+app.use(urlencoded({ extended: true }));
 
 // Routes
 app.use("/api", validateReferral);
