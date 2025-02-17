@@ -3,9 +3,8 @@
   "version": "1.0.0",
   "description": "A Node.js application for handling referral form data with RESTful APIs, MySQL database connectivity using Prisma ORM, error handling, and email notifications.",
   "main": "dist/app.js",
-  "type": "module",
   "scripts": {
-    "start": "node dist/app.js",
+    "start": "node --experimental-specifier-resolution=node dist/app.js dist/app.js",
     "build": "npm install && npx prisma generate && tsc",
     "dev": "ts-node-dev --respawn --transpile-only app.ts",
     "lint": "eslint . --ext .ts",
@@ -26,9 +25,10 @@
     "@types/body-parser": "1.19.5",
     "@types/cors": "2.8.17",
     "@types/express": "4.17.21",
-    "@types/node": "^18.19.76",
+    "@types/node": "18.19.76",
+    "nodemon": "3.1.9",
     "prisma": "^5.x.x",
-    "ts-node": "^10.4.0",
+    "ts-node": "10.9.2",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.0.4"
   },
